@@ -1,4 +1,6 @@
-natetyler.github.io
+Auto-suggest wikiquote quotables.
+
+Forked from natetyler.github.io
 ===================
 
-[View on github pages](http://natetyler.github.io)
+

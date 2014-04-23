@@ -122,26 +122,13 @@ $(document).ready(function(){
   // });
 
     $("a.btn").click(function(){
-	WikiquoteApi.queryTitles(
-	    $('#search-box1').val(),
-	    function(page){
-		console.log('page',page);
-		WikiquoteApi.getSectionsForPage(
-		    page,
-		    function(sections){
-			console.log('sections',sections)
-			WikiquoteApi.getQuotesForSection(
-			    page,'1',
-			    function(quotes){
-				console.log('quotes',quotes)
-				var qs = quotes['quotes'].join('<br>'); //naughty
-				$("#mashup")[0].innerHTML = qs;
-				
-			    },
-			    function(x){console.log('fail',x)});
-		    },
-		    function(x){console.log('fail',x)})				
-	    }, 
-	    function(x){console.log('fail',x)})
-    });    
+	WikiquoteApi.queryTitles(titles,
+				 function(page){
+				     console.log(page);
+				     //WikiquoteApi.getSectionsForPage('3888',function(x){console.log('success',x)},function(x){console.log('fail',x)})
+
+				     //WikiquoteApi.getQuotesForSection('3888','1',function(x){console.log('success',x)},function(x){console.log('fail',x)})				 }, 
+				     ,function(x){console.log('fail',x)})
+    });
+    
 });

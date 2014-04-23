@@ -6,6 +6,7 @@
     <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
     <link href="stylesheets/app.css" rel="stylesheet">
     <script src="javascripts/jquery-2.0.2.min.js"></script>
+    <script src="javascripts/typeahead.js"></script>
     <script src="javascripts/wikiquote-api.js"></script>
     <script src="javascripts/app.js">
     </script>
@@ -15,28 +16,20 @@
     <div class="container main-bg">
       <div class="header text-center">
         <h1>Quote Mashup</h1>
-        <h4>Create a quote mashup by searching for random quotes from two famous people.<br />
-        Don't like your mashup? Search again!</h4>
-        <a class="btn btn-primary">Show me</a>
-        <a id="forkme_banner" href="https://github.com/natetyler">View on GitHub</a>
+        <h4><br />
+        </h4>
+        <!-- <a id="forkme_banner" href="https://github.com/natetyler">View on GitHub</a> -->
       </div>
 
       <div class="row">
         <div class="span5">
           <form id="form1" class="search-form" method="post">
-            <input id="search-box1" class="search-box" type="text" />
-            <input type="submit" value="Search" class="button btn" />
+            <input id="search-box1" class="search-box typeahead" type="text" />
+	    <a class="btn btn-primary">Get Quotes</a> 
           </form>
           <div class="quotes"></div>
         </div>
 
-        <div class="span5">
-          <form id="form2" class="search-form" method="post">
-            <input id="search-box2" class="search-box" type="text" />
-            <input type="submit" value="Search" class="button btn" />
-          </form>
-          <div class="quotes"></div>
-        </div>
       </div>
 
       <div id="mashup">
